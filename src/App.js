@@ -14,7 +14,7 @@ function App() {
   const handleSearch = async (username) => {
     setError('');
     try {
-      const { data } = await axios.get(`http://localhost:5000/api/search/${username}`);
+      const { data } = await axios.get(`https://github-analyzer-backend-hdi0.onrender.com/api/search/${username}`);
       setProfile(data.profile);
       setRepos(data.repos);
       setCached(data.cached);
